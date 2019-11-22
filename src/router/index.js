@@ -1,22 +1,24 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import WangEditor from '../views/WangEditor.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: Home
+    name: 'WangEditor',
+    component: WangEditor
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/read-execl',
+    name: 'ReadExecl',
+    component: () => import( '../views/ReadExecl.vue')
+  },
+  {
+    path: '/export-execl',
+    name: 'ExportExecl',
+    component: () => import( '../views/ExportExecl.vue')
   }
 ]
 
